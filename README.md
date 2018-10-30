@@ -56,3 +56,14 @@ hand K=2.
 
 This is the canonical example for MapReduce so if distributed computing was available, then that would be beneficial for larger inputs. The algorithm used
 above is already the same sort, so minimal changes would be necessary.
+
+# CLARIFICATIONS
+
+Asked for this clarification in email, but did not hear back before submission. So assuming that input is not incorrectly formatted.
+
+There is a note saying that each year has different columns. For example, in the H1b_FY_2014 file there are columns for 
+LCA_CASE_WORKLOC1_STATE and LCA_CASE_WORKLOC2_STATE. Which one should be interpreted as the WORKSITE_STATE?
+Similarly does LCA_CASE_SOC_NAME correspond to SOC_NAME? If these change from test case to test case, is 
+there a pattern or might there be a time when the column is labelled JUNK and it is actually storing the STATE? 
+The case above also means it is not just the substring STATE to look for to know which column is the correct column
+to look at.
