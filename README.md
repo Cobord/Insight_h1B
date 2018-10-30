@@ -1,8 +1,11 @@
 # Language and Imports used
 
 Scala
+
 scala.io.Source
+
 scala.collection.mutable.{Map,HashMap,PriorityQueue}
+
 java.io._
 
 # PROBLEM
@@ -15,13 +18,16 @@ then simply all of them in order.
 # APPROACH
 
 We approach the problem more generally. Instead of just CERTIFIED and their STATES and OCCUPATIONS, we allow this to be abstracted.
+
 Instead let there be a list of tuples like [(CASE_STATUS,CERTIFIED),(EMPLOYER_STATE,CA)]. This would instead of only counting amongst
 CERTIFIED workers would only count CERTIFIED workers whose employer is based in California. This list is adjustable in a single line in
 the main function.
+
 Also instead of just two variables to count being state and occupations, this is also adjustable. This is specified by another list
 like ("EMPLOYER_STATE","SOC_NAME","WORKSITE_STATE") would count from those 3 columns of the input.csv file. If not enough locations are
 provided for the output files then the program throws an exception. In this case one must provide 3 files for the output to go. For notation,
 say there are K such columns being tracked.
+
 We also allow the top 10 to be adjustable into the top top_how_many which is adjustable in a single line of the main function.
 
 From this we make K dictionaries that are keyed on the String that is a potential "SOC_NAME" etc with value being the count of how many
